@@ -30,7 +30,7 @@ class Predictionpipeline:
         
 
 class CustomData:
-    def __init__(seld,
+    def __init__(self,
                  carat:float,
                  depth:float,
                  table:float,
@@ -59,6 +59,7 @@ class CustomData:
                 'table':[self.table],
                  'x':[self.x],
                  'y':[self.y],
+                  'z':[self.z],
                  'cut':[self.cut],
                   'color':[self.color],
                   'clarity':[self.clarity]

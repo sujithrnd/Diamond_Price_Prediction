@@ -1,11 +1,10 @@
 from flask import Flask,request,render_template,jsonify
-from src.pipeline.prediction_pipeline import CustomData,PredictPipeline
+from src.pipeline.prediction_pipeline import CustomData,Predictionpipeline
 
 
 application=Flask(__name__)
 
 app=application
-
 
 
 @app.route('/')
@@ -31,12 +30,12 @@ def predict_datapoint():
             clarity = request.form.get('clarity')
         )
         final_new_data=data.get_data_as_dataframe()
-        predict_pipeline=PredictPipeline()
+        predict_pipeline=Predictionpipeline()
         pred=predict_pipeline.predict(final_new_data)
 
         results=round(pred[0],2)
 
-        return render_template('results.html',final_result=results)
+        return render_template('result.html',final_result=results)
 
 
 

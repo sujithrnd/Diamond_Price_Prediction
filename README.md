@@ -14,3 +14,9 @@ conda remove --name ENVIRONMENT --all
 
 python src/pipeline/training_pipeline.py
 python src/pipeline/prediction_pipeline.py
+
+Invoke
+----------------
+python app.py
+http://127.0.0.1:5000/ ->index.html
+http://127.0.0.1:5000/predict
